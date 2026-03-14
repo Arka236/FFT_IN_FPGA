@@ -121,9 +121,9 @@ This architecture can be extended for:
 							FPGA hardware acceleration
 							Vivado design suite
 
-# Future Improvements
+# 11.Future Improvements
 Possible enhancements include:
-							Implementing 2D FFT for full image processing
-							Real-time video signal processing
-							Frequency-domain filtering
-							Hardware IFFT for signal reconstruction
+							Implementing 2D FFT for full image processing.
+							Real-time video signal processing,
+							Frequency-domain filtering,
+							Hardware IFFT for signal reconstruction.
