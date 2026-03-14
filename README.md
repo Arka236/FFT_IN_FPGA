@@ -85,10 +85,10 @@ In this implementation, a 32×32 grayscale image (1024 pixels) is treated as a 1
 # 6.Hardware Design
 The FFT accelerator is implemented using Verilog RTL in the FPGA fabric.
 Main components include:
-							Butterfly computation units
-							Twiddle factor multipliers
-							Pipeline registers
-							Control logic for streaming computation
+							Butterfly computation units,
+							Twiddle factor multipliers,
+							Pipeline registers,
+							Control logic for streaming computation,
 The design supports continuous streaming data processing, allowing high-throughput operation.
 
 # 7.Software Implementation
