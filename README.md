@@ -68,11 +68,11 @@ O(N²)  →  O(N log₂ N)
 
 which significantly improves performance for large datasets.
 
-# Image Processing Workflow
+# 5.Image Processing Workflow
 
 In this implementation, a 32×32 grayscale image (1024 pixels) is treated as a 1-dimensional signal.
 
-# Processing steps
+# 5.1.Processing steps
 
 							Load the 32×32 grayscale image
 							Flatten the image into 1024 data samples
@@ -82,7 +82,7 @@ In this implementation, a 32×32 grayscale image (1024 pixels) is treated as a 1
 							Convert results into binary output format
 							Reconstruct or visualize results as an image
 
-# Hardware Design
+# 6.Hardware Design
 The FFT accelerator is implemented using Verilog RTL in the FPGA fabric.
 Main components include:
 							Butterfly computation units
@@ -91,7 +91,7 @@ Main components include:
 							Control logic for streaming computation
 The design supports continuous streaming data processing, allowing high-throughput operation.
 
-# Software Implementation
+# 7.Software Implementation
 The software component runs on the ARM processor inside the Zynq device and performs:
 							Memory allocation for input/output buffers
 							Initialization of the AXI DMA engine
@@ -99,14 +99,14 @@ The software component runs on the ARM processor inside the Zynq device and perf
 							Reading/writing binary data files
 							The program is developed using C in Xilinx SDK/Vitis.
 
-# Key Features
+# 8.Key Features
 							Hardware-accelerated 1024-point FFT
 							FPGA-based numerical transformation
 							High-speed AXI-DMA data transfer
 							PS–PL co-design architecture
 							Image-to-signal conversion for frequency-domain analysis
 
-# Applications
+# 9.Applications
 This architecture can be extended for:
 							Image filtering
 							Edge detection
@@ -114,7 +114,7 @@ This architecture can be extended for:
 							Radar and communication systems
 							Real-time DSP acceleration
 
-# Technologies Used
+# 10.Technologies Used
 							Verilog HDL
 							C (Xilinx SDK / Vitis)
 							AXI DMA
