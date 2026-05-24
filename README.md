@@ -59,13 +59,21 @@ Target Device: **XC7Z020 (ZedBoard)** | Operating Frequency: **70 MHz**
 │   └── convert_fpga.py      # Output visualization & Spectrum analyzer
 ├── img/                     # Benchmark and architecture images
 └── README.md
-# 1.Overview
+
+
+
+
+
+
+
+
+### 1.Overview
 
 This project implements a hardware-accelerated numerical transformation pipeline on FPGA using a 1024-point Fast Fourier Transform (FFT). The system processes image or signal data by converting it from the spatial/time domain to the frequency domain, enabling efficient signal analysis and transformations.
 
 The design is implemented on a Xilinx Zynq‑7000 SoC FPGA platform, where the Processing System (ARM Cortex-A9) manages data flow and the Programmable Logic (FPGA fabric) performs high-speed FFT computation.
 
-# 2.System Architecture
+### 2.System Architecture
 
 The system follows a PS–PL hardware acceleration architecture.
 
