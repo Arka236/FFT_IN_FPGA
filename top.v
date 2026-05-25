@@ -34,14 +34,20 @@ module top #(
 
     // 1. The Global Counter
     reg [STAGES-1:0] master_cnt;
+    
     always @(posedge clk or negedge reset) begin
-        if (!reset) master_cnt <= 0;
-        else if (start) begin 
-          if (master_cnt == N-1)
-             master_cnt <= 0;
-          else
-             master_cnt <= master_cnt + 1;
-       end
+        if (!reset) begin
+            master_cnt <= 0;
+        end else if (start) begin
+            if (master_cnt == N-1) 
+                master_cnt <= 0;
+            else 
+                master_cnt <= master_cnt + 1;
+        end else begin
+            // THE MAGIC FIX: 
+            // When start drops to 0 (between frames), instantly wipe the counter!
+            master_cnt <= 0;
+        end
     end
 
     // 2. Data Pipeline Rails (Arrays of wires connecting the stages)
